@@ -22,7 +22,7 @@
 
 
 ## Description
-Vconnect is a web platform made for students of VIT chennai to connect with each other for cab sharing.The project was made so as to over the high cab prices students have to pay to travel anywhere. The user can create a post specifying their requirement like which destination
+Vconnect is a web platform made for students of VIT chennai to connect with each other for cab sharing.The project was made so as to tackle the high cab prices students have to pay to travel anywhere. The user can create a post specifying their requirement like which destination
 ,time they are planning to go. This automatically creates
 a group chat which others users(who also maybe going to the same place) can join and chat with the creator and other people.I have used JWT authentication for authentication.
 . I have also added proper form validation and used React Context API to manage  state. I am using
