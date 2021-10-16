@@ -1,0 +1,84 @@
+.chatbox {
+  max-width: 750px;
+}
+
+.message {
+  display: flex;
+}
+
+.sent .avatar {
+  margin-left: 2px;
+}
+.received .avatar {
+  margin-right: 4px;
+}
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  margin-top: 2px;
+  
+  background: #e5e5ea;
+  align-self: flex-end;
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  text-align: right;
+}
+.sent p span {
+  font-size: clamp(5px, 1.5vw, 14px);
+  color: #d70040;
+  font-weight: 650;
+}
+.received p {
+  margin-top: 0px;
+  padding-top: 0px;
+  background: #e5e5ea;
+  color: black;
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  text-align: left;
+}
+.received p span {
+  font-size: clamp(5px, 1.5vw, 14px);
+  color: #d70040;
+  font-weight: 650;
+}
+
+h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 45px;
+}
+
+.in_box {
+  width: 85%;
+  padding: 9px;
+  border-radius: 3px;
+  border: none;
+  background: #f4f4f2;
+  font-size: 20px;
+}
+
+.in_box {
+  outline: none;
+}
+
+.send {
+  width: 85px;
+  padding: 9px;
+  font-size: 20px;
+  margin-left: 9px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.form {
+  display: flex;
+}

@@ -1,0 +1,23 @@
+.shadow {
+  box-shadow: 4px 5px 25px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 5px 25px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 5px 25px -5px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.chat-btn {
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 18px 6px 18px;
+  font-weight: 500;
+  
+}
+
+.chat-btn:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
