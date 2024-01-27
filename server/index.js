@@ -10,6 +10,10 @@ dotenv.config();
 
 // set up server
 const server = require('http').createServer(app);
+const initializeSocket = require('./socket');
+
+// Initialize socket.io
+initializeSocket(server);
 
 
 const PORT = process.env.PORT || 8000;
@@ -52,32 +56,9 @@ app.use("/chat",require("./routers/chat"));
 
 
 
-const io = require("socket.io")(server, {
-  allowEIO3: true,
-  cors: {
-    origin: true,
-    methods: ['GET', 'POST'],
-    credentials: true
-  }
-});
-/*
-io.use( (socket, next) => {
-  try {
-    const token = socket.handshake.query.token;
-    if (!token)
-    {
-       console.log("didnt match")
-       return res.status(401).json({ errorMessage: "Unauthorized" });
-    }
-     
-    const verified = jwt.verify(token, process.env.JWT_SECRET);
-    socket.userId = verified.email;
-    next();
-  } catch (err) {}
-});
-*/
-// the conncection is set up 
-io.on('connection', (socket) => {
+// Socket.io setup has been moved to server/socket.js
+// Connection logic has been moved to server/socket.js
+// Connection event logic has been moved to server/socket.js
   // io.emit() -> for all clients when a connection happens
   // socket.emit() -> for that particular socket connection
   // socket.broadcast.emit() -> all other clients apart from that socket connection
@@ -118,7 +99,7 @@ io.on('connection', (socket) => {
       console.error(err)
     }  
     
-  });
+  // Connection event handling has been moved to server/socket.js
   
   // leave room
   socket.on("leaveRoom", ({ chatroomId }) => {
